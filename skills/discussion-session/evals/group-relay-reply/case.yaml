@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: group-relay-reply
+expected_outcome: |
+  Claude stores the pasted reply under CHATGPT's tag with a relay attribution, consolidates round 2 (all three present), opens round 3, submits its own round-3 file, and gives the user a compact relay packet for ChatGPT.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: write-procedure-runbook
+expected_outcome: |
+  rotate-api-key.md is a procedure in STE: numbered steps in the imperative, one instruction per step,
+  at most 20 words per step, approved words or technical names only, and the technical names
+  (Vault path, kubectl, /health, admin console) unchanged. The STE checker of the skill reports no errors.

@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: check-and-fix-release-notes
+expected_outcome: |
+  release-notes.md is rewritten in STE with all facts kept (version 2.4.0, date 2026-11-02, the login
+  timeout fix after 30 minutes, the CSV export with the Export button, the deprecation of /api/v1/orders
+  and the move to /api/v2/orders before 2027-01-01, the cache advice). The STE checker reports no errors,
+  and the answer summarizes the changes.
+context:
+  scaffold_script: place-files.sh

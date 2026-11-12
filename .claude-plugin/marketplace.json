@@ -1,0 +1,7 @@
+{
+  "name": "ts-claude-skills",
+  "owner": { "name": "Taras Spashchenko" },
+  "plugins": [
+    { "name": "ts-skills", "source": "./" }
+  ]
+}

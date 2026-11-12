@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: group-setup-four-counterparts
+expected_outcome: |
+  Group mode set up for five participants: a shared prompt, four entry prompts with distinct roles and capability checks, a board with roster and round 1 open, Claude's own blind round-1 submission, one paste line per agent with folder-access instructions, and nothing started.
+context:
+  scaffold_script: place-files.sh

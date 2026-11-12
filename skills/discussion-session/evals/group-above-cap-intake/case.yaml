@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: group-above-cap-intake
+expected_outcome: |
+  Claude explains the cap of five participants including itself (four counterparts), notes that six were named, asks which to keep, and creates no discussion files.
+context:
+  scaffold_script: place-files.sh

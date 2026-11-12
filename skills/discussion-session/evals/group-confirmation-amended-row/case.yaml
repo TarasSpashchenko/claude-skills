@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: group-confirmation-amended-row
+expected_outcome: |
+  Claude corrects the OQ-3 row to 30 s, opens one more confirmation round for OQ-3 only within the 5-round ceiling, keeps OQ-1 agreed with PI's missing confirmation labeled, keeps OQ-2 as needs-decision with GEMINI's dissent, and reports to the user.
+context:
+  scaffold_script: place-files.sh

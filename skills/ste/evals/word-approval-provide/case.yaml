@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: word-approval-provide
+expected_outcome: |
+  The answer says that "provide" is not approved in STE, gives the dictionary alternatives
+  (GIVE, SUPPLY), and proposes an STE sentence such as "The API gives a list of orders for each customer."

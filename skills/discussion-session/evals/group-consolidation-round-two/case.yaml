@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: group-consolidation-round-two
+expected_outcome: |
+  Claude folds round 2 into the board, applies GEMINI's correction, keeps the minority stance, records PI as missing without dropping it, marks only fully accepted items agreed, opens round 3 with a new deadline, submits its own round-3 file answering the questions, and reports to the user.
+context:
+  scaffold_script: place-files.sh

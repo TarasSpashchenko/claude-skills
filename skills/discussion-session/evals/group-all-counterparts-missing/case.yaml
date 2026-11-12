@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: group-all-counterparts-missing
+expected_outcome: |
+  Claude writes an incomplete outcome that claims no agreement and names the missing participants, closes the board, removes the board.py copy, and tells the user.
+context:
+  scaffold_script: place-files.sh
