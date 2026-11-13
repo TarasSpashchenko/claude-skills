@@ -1,0 +1,50 @@
+diff -ruN base/.ai-run/guides/development/api.md set-B/.ai-run/guides/development/api.md
+--- base/.ai-run/guides/development/api.md	2026-11-13 17:04:24.233033788 +0100
++++ set-B/.ai-run/guides/development/api.md	2026-11-13 17:04:24.237371509 +0100
+@@ -1,6 +1,8 @@
+ # API
+ 
+-> Backend calls go through `src/api/client.ts`.
++## Overview
++
++Backend calls go through `apiGet` and `apiStream` in `src/api/client.ts`.
+ 
+ ## Calling an endpoint
+ 
+diff -ruN base/.ai-run/guides/development/constants.md set-B/.ai-run/guides/development/constants.md
+--- base/.ai-run/guides/development/constants.md	2026-11-13 17:04:24.233123518 +0100
++++ set-B/.ai-run/guides/development/constants.md	2026-11-13 17:04:24.237444679 +0100
+@@ -1,9 +1,13 @@
+ # Constants
+ 
++## Overview
++
++Feature flags are string keys; check them with `useFeatureFlag`.
++
+ ## Where constants live
+ 
+-- Import every constant from the `@/constants` barrel, including `FEATURE_FLAGS`.
+-- `LIMITS` is in `src/constants/limits.json`.
++- Import `ROUTES` and `LIMITS` from `@/constants`; import `FEATURE_FLAGS` from `@/constants/featureFlags`.
++- `LIMITS` is in `src/constants/limits.ts`.
+ 
+ ## Feature flags
+ 
+diff -ruN base/.ai-run/guides/knowledge-manifest.json set-B/.ai-run/guides/knowledge-manifest.json
+--- base/.ai-run/guides/knowledge-manifest.json	1970-01-01 01:00:00.000000000 +0100
++++ set-B/.ai-run/guides/knowledge-manifest.json	2026-11-13 17:04:24.237908392 +0100
+@@ -0,0 +1,4 @@
++{
++  "generator": "knowledge-foundation",
++  "last_updated": "2026-11-12T18:04:20Z"
++}
+diff -ruN base/.ai-run/guides/README.md set-B/.ai-run/guides/README.md
+--- base/.ai-run/guides/README.md	2026-11-13 17:04:24.232950421 +0100
++++ set-B/.ai-run/guides/README.md	2026-11-13 17:04:24.237285460 +0100
+@@ -6,5 +6,5 @@
+ | `development/constants.md` | Where constants and feature flags live |
+ | `architecture/routing.md` | How routes are declared |
+ | `components/components.md` | How components are built |
+-| `testing/tests.md` | How to write and run tests |
++| `testing/testing.md` | How to write and run tests |
+ | `standards/git-workflow.md` | Branch and commit format |

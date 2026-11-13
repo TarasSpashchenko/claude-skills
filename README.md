@@ -6,8 +6,9 @@ Agent skills for Claude Code.
 |---|---|
 | [`ste`](skills/ste/SKILL.md) | Writes and checks documentation in ASD-STE100 Simplified Technical English (Issue 9). |
 | [`discussion-session`](skills/discussion-session/SKILL.md) | Runs a turn-based written discussion between Claude and other agents (Codex, Gemini CLI, opencode, pi, …) or human experts on a shared Markdown board, and closes with an agreed outcome. |
+| [`agent-docs-assessment`](skills/agent-docs-assessment/SKILL.md) | Assesses AI-agent documentation (`AGENTS.md`, guide trees such as sdlc-factory's `.ai-run/guides`) with a team of reviewing agents on top of `discussion-session`: blind review kit, comparable assessments, comparison of candidate sets, outcomes and evidence-checked developer feedback. |
 
-Both skills ship helper scripts that need Python 3 (standard library only).
+All skills ship helper scripts that need Python 3 (standard library only).
 
 `ste` also needs a local copy of the ASD-STE100 Issue 9 standard as Markdown, one file per PDF page (`page_001.md` …).
 ASD owns its copyright, so this repository does not include it. Request the PDF from ASD, convert it, and put the pages in

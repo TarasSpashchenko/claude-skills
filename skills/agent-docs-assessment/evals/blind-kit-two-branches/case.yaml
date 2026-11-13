@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: blind-kit-two-branches
+expected_outcome: |
+  A review folder outside the repository with one blind export per branch (set-A, set-B), base docs, measured facts and two assessment discussions built on discussion-session group mode. The label mapping is kept outside the review folder. The leak of the model names in the generated manifest is neutralised or reported. Both assessment prompts share one method (reading shares, register rules with reproduction and origin, a fixed routing probe with a strict/lenient rule) and differ only in set-specific values. One entry prompt per agent per set; the final message gives four start lines and starts nothing.
+context:
+  scaffold_script: place-files.sh

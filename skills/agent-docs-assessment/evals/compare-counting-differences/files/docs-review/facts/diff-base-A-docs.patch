@@ -1,0 +1,83 @@
+diff -ruN base/.ai-run/guides/architecture/routing.md set-A/.ai-run/guides/architecture/routing.md
+--- base/.ai-run/guides/architecture/routing.md	2026-11-13 17:04:24.233211128 +0100
++++ set-A/.ai-run/guides/architecture/routing.md	2026-11-13 17:04:24.235366717 +0100
+@@ -1,5 +1,5 @@
+ # Routing
+ 
+ - Routes are declared in `src/router.tsx` with `createBrowserRouter`.
+-- Every route page is wrapped in `lazy()` so it loads on demand.
++- Route pages are imported statically in `src/router.tsx`.
+ - Use `ROUTES` from `@/constants` for paths.
+diff -ruN base/.ai-run/guides/development/api.md set-A/.ai-run/guides/development/api.md
+--- base/.ai-run/guides/development/api.md	2026-11-13 17:04:24.233033788 +0100
++++ set-A/.ai-run/guides/development/api.md	2026-11-13 17:04:24.235219011 +0100
+@@ -1,12 +1,18 @@
+ # API
+ 
+-> Backend calls go through `src/api/client.ts`.
++## Overview
++
++Backend calls go through `src/api/client.ts`: `apiGet` for JSON, `apiStream` for streamed bodies.
++
++| Part | What it holds | Start here |
++|---|---|---|
++| `src/api/client.ts` | request helpers | `src/api/client.ts::apiGet` |
+ 
+ ## Calling an endpoint
+ 
+-- `apiGet<T>(url)` never throws: it returns `{ data, error }`, so check `error` before you use `data`.
+-- Errors show a toast automatically.
++- `apiGet<T>(url, options)` resolves with the parsed JSON. On a non-2xx status it shows an error toast and rejects with the `Response`.
++- Pass `skipErrorToast: true` when the caller shows its own message, and catch the rejection.
+ 
+ ## Streaming
+ 
+-- `apiStream(url)` returns a reader; read chunks with `reader.read()`.
++- `apiStream(url)` returns a `ReadableStream`; call `getReader()` on it before you read chunks.
+diff -ruN base/.ai-run/guides/development/constants.md set-A/.ai-run/guides/development/constants.md
+--- base/.ai-run/guides/development/constants.md	2026-11-13 17:04:24.233123518 +0100
++++ set-A/.ai-run/guides/development/constants.md	2026-11-13 17:04:24.235287944 +0100
+@@ -1,9 +1,13 @@
+ # Constants
+ 
++## Overview
++
++Feature flags are string keys from `src/constants/featureFlags.ts`; check them with `useFeatureFlag`.
++
+ ## Where constants live
+ 
+-- Import every constant from the `@/constants` barrel, including `FEATURE_FLAGS`.
+-- `LIMITS` is in `src/constants/limits.json`.
++- Import `ROUTES` and `LIMITS` from `@/constants`; import `FEATURE_FLAGS` from `@/constants/featureFlags`.
++- `LIMITS` is in `src/constants/limits.ts`.
+ 
+ ## Feature flags
+ 
+diff -ruN base/.ai-run/guides/knowledge-manifest.json set-A/.ai-run/guides/knowledge-manifest.json
+--- base/.ai-run/guides/knowledge-manifest.json	1970-01-01 01:00:00.000000000 +0100
++++ set-A/.ai-run/guides/knowledge-manifest.json	2026-11-13 17:04:24.235663053 +0100
+@@ -0,0 +1,4 @@
++{
++  "generator": "knowledge-foundation",
++  "last_updated": "2026-11-12T18:04:20Z"
++}
+diff -ruN base/.ai-run/guides/README.md set-A/.ai-run/guides/README.md
+--- base/.ai-run/guides/README.md	2026-11-13 17:04:24.232950421 +0100
++++ set-A/.ai-run/guides/README.md	2026-11-13 17:04:24.235138429 +0100
+@@ -6,5 +6,5 @@
+ | `development/constants.md` | Where constants and feature flags live |
+ | `architecture/routing.md` | How routes are declared |
+ | `components/components.md` | How components are built |
+-| `testing/tests.md` | How to write and run tests |
++| `testing/testing.md` | How to write and run tests |
+ | `standards/git-workflow.md` | Branch and commit format |
+diff -ruN base/.ai-run/guides/standards/git-workflow.md set-A/.ai-run/guides/standards/git-workflow.md
+--- base/.ai-run/guides/standards/git-workflow.md	2026-11-13 17:04:24.233440956 +0100
++++ set-A/.ai-run/guides/standards/git-workflow.md	2026-11-13 17:04:24.235595560 +0100
+@@ -7,4 +7,5 @@
+ ## Commit
+ 
+ - `SHOP-<n>: <Summary>`
+-- Example: `SHOP-12: Add wishlist button to product page`
++- Write the summary in the imperative mood and keep the subject under 72 characters (CONTRIBUTING.md).
++- Example: `SHOP-12: Add the wishlist button to the product page and to the cart page footer`
