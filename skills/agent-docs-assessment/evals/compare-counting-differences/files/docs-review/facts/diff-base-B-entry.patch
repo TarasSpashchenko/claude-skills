@@ -1,0 +1,17 @@
+--- base/AGENTS.md	2026-11-13 17:04:24.232833187 +0100
++++ set-B/AGENTS.md	2026-11-13 17:04:24.237167578 +0100
+@@ -18,11 +18,13 @@
+ 
+ | Category | Example Requests | P0 Guide | P1 Guide |
+ |---|---|---|---|
+-| Development | call an endpoint; extract this constant; add a feature flag | `.ai-run/guides/development/api.md` | `.ai-run/guides/development/constants.md` |
++| API | call an endpoint; handle a failed request | `.ai-run/guides/development/api.md` | - |
++| Constants | extract this constant; add a feature flag | `.ai-run/guides/development/constants.md` | - |
+ | Routing | add a page; change a route | `.ai-run/guides/architecture/routing.md` | `.ai-run/guides/development/constants.md` |
+ | Components | new component; reuse a button | `.ai-run/guides/components/components.md` | - |
+ | Testing | write tests; fix a failing test | `.ai-run/guides/testing/testing.md` | - |
+ | Git | commit; open an MR | `.ai-run/guides/standards/git-workflow.md` | - |
++| Development | call an endpoint; extract this constant; add a feature flag | `.ai-run/guides/development/api.md` | `.ai-run/guides/development/constants.md` |
+ 
+ ## Critical Rules
+ 

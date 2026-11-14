@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: compare-counting-differences
+expected_outcome: |
+  A comparison discussion folder (compare/) with facts for the comparison that put both scorecards side by side and list every place the two assessments counted differently, with the normalised values, a prompt with an agenda covering comparability, accuracy, run additions and removals, routing, consumers, fix cost and the recommendation, entry prompts, and Claude's own round-1 position. No model or branch name appears under docs-review.
+context:
+  scaffold_script: place-files.sh

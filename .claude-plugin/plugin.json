@@ -1,6 +1,6 @@
 {
   "name": "ts-skills",
   "version": "0.1.0",
-  "description": "Agent skills: ASD-STE100 Simplified Technical English writing and checking (ste), and turn-based discussions with other agents or experts on a shared board (discussion-session).",
+  "description": "Agent skills: ASD-STE100 Simplified Technical English writing and checking (ste), turn-based discussions with other agents or experts on a shared board (discussion-session), and assessment of AI-agent documentation with a reviewing team (agent-docs-assessment).",
   "author": { "name": "Taras Spashchenko" }
 }

@@ -1,0 +1,3 @@
+# label mapping, blind (random order); base=main
+A=docs/regen-opus (3f1c2aa)
+B=docs/regen-sonnet (8b0d4e1)

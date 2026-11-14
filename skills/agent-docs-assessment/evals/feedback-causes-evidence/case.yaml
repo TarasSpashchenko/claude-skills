@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: feedback-causes-evidence
+expected_outcome: |
+  A feedback document for the developer, written in the review folder, that takes the verdict, the fix-before-merge list and the inherited defects from the closed board, says what the review cannot show about delivered solutions, and has a causes section where every statement cites generator code or a command: the 20-line excerpt limit and the merge rule are confirmed with file and line, the "checker never looks at tables" claim is corrected (it checks table cells, case-insensitively), and the template claim is not stated as a cause.
+context:
+  scaffold_script: place-files.sh
